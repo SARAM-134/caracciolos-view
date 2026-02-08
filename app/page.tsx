@@ -1,5 +1,7 @@
 import { sanityClient } from '@/lib/sanity.client'
 import { pageBySlugQuery } from '@/lib/sanity.queries'
+import { PortableText } from '@portabletext/react'
+import { portableTextComponents } from '../lib/portableText'
 
 export default async function Home() {
   const data = await sanityClient.fetch(pageBySlugQuery, { slug: 'home' })
@@ -42,4 +44,5 @@ export default async function Home() {
       </section>
     </main>
   )
+  
 }
